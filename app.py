@@ -8,12 +8,6 @@ def base_page():
 
 @app.route("/story")
 def generate_story():
-    answers = {
-        "verb": request.args["verb"],
-        "noun": request.args["noun"],
-        "place": request.args["place"],
-        "adjective": request.args["adjective"],
-        "plural_noun": request.args["plural_noun"]
-    }
+    answers = {**request.args}
     
     return render_template("story.html", story_body = stories.story.generate(answers))
