@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<body>
-    <h1>Madlibs</h1>
-    <form action="/story">
-        {% for word in words %}
-        <p>
-            <label for={{word}}>{{word}}: </label>
-            <input id={{word}} type="text" name={{word}}>
-        </p>
-        {% endfor %}
-        <button type="submit">Submit</button>
-    </form>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+<h1>Madlibs</h1>
+<form action="/story">
+    {% for word in words %}
+    <p>
+        <label for={{word}}>{{word}}: </label>
+        <input id={{word}} type="text" name={{word}}>
+    </p>
+    {% endfor %}
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}
