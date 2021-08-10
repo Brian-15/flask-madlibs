@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form action="/form">
+    <p>
+        <label for="story-select">Pick a story template: </label>
+        <select name="story_select" id="story-select">
+            {% for story in story_templates %}
+                <option value="{{loop.index}}">{{story.template}}</option>
+            {% endfor %}
+        </select>
+    </p>
+    <button type="submit">Select</button>
+</form>
+
+{% endblock %}

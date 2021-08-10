@@ -43,3 +43,22 @@ story = Story(
     """Once upon a time in a long-ago {place}, there lived a
        large {adjective} {noun}. It loved to {verb} {plural_noun}."""
 )
+
+story1 = Story(
+    ["verb", "plural_noun"],
+    """I love to {verb} with {plural_noun}."""
+)
+
+story2 = Story(
+    ["adjective", "noun", "plural_noun"],
+    """I am a(n) {adjective} {noun} who collects {plural_noun}."""
+)
+
+story3 = Story(
+    ["noun", "adjective", "plural_noun"],
+    """Let there be {noun}, said the {adjective} {plural_noun}."""
+)
+
+story_arr = [story, story1, story2, story3]
+
+story_select = None
