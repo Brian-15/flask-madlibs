@@ -7,7 +7,7 @@
     {% for word in words %}
     <p>
         <label for={{word}}>{{word}}: </label>
-        <input id={{word}} type="text" name={{word}}>
+        <input id={{word}} type="text" name={{word}} required>
     </p>
     {% endfor %}
     <button type="submit">Submit</button>
